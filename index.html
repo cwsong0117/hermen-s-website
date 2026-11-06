@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hermen's personal website: a software developer who turns coffee into code. Skills, projects and how to get in touch.">
+    <meta name="theme-color" content="#070b16">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hermen's Website">
+    <meta property="og:description" content="A software developer who turns coffee into code. Skills, projects and how to get in touch.">
+    <!-- TODO(image): once the site is live, add <meta property="og:image" content="https://YOUR-DOMAIN/images/og-image.png"> (1200x630). See CONTENT-TODO.md -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Pacifico&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hermen's Website</title>
+    <script>
+        // Runs before the first paint: turns on the JS-only styles and restores the saved theme (no flash).
+        document.documentElement.classList.add('js');
+        try {
+            var savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light' || savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        } catch (e) {}
+    </script>
+</head>
+<body>
+    <!-- Animated background (purely decorative) -->
+    <div class="bg" aria-hidden="true">
+        <canvas id="bg-canvas"></canvas>
+        <div class="bg__grid"></div>
+        <div class="bg__blob bg__blob--one"></div>
+        <div class="bg__blob bg__blob--two"></div>
+        <div class="bg__glyphs" id="glyphs"></div>
+        <div class="bg__scan"></div>
+        <div class="cursor-glow" id="cursor-glow"></div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header>
+        <a href="#hero" class="logo">Hermen</a>
+        <nav id="site-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme"><span aria-hidden="true">☀️</span></button>
+            <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bar"></span></button>
+        </div>
+        <div class="progress" id="progress" aria-hidden="true"></div>
+    </header>
+
+    <main id="main">
+        <!-- ============ HERO ============ -->
+        <section id="hero">
+            <div class="hero__copy">
+                <p class="chip" data-reveal><span class="chip__dot"></span> Online · fueled by coffee ☕</p>
+                <h1 data-reveal style="--d: 1">Hi, I'm <span class="glitch" data-text="Hermen">Hermen</span> <span class="wave" aria-hidden="true">👋</span></h1>
+                <!-- TODO(content): edit the typed phrases (separate them with |) -->
+                <p class="hero__terminal" data-reveal style="--d: 2" aria-hidden="true"><span class="prompt">hermen@web:~$</span> <span class="typed" data-typed="I turn coffee into code ☕|I debug with a rubber duck 🦆|I google errors professionally 🔍|I ship first and polish later 🚀|I say it works on my machine 😅">I turn coffee into code ☕</span><span class="caret"></span></p>
+                <!-- TODO(content): write your own one-line intro -->
+                <p class="hero__lead" data-reveal style="--d: 3">I'm a software developer and I love to create things, mostly with code, sometimes with excuses.</p>
+                <div class="hero__cta" data-reveal style="--d: 4">
+                    <a class="btn btn--primary" href="#projects">See my projects <span aria-hidden="true">→</span></a>
+                    <a class="btn btn--ghost" href="#contact">Say hello</a>
+                </div>
+                <ul class="socials" data-reveal style="--d: 5">
+                    <li><a href="https://github.com/cwsong0117" target="_blank" rel="noopener">./github</a></li>
+                    <!-- TODO(content): replace with your real LinkedIn profile URL -->
+                    <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">./linkedin</a></li>
+                    <li><a href="#contact">./email</a></li>
+                </ul>
+            </div>
+
+            <div class="hero__visual" data-reveal style="--d: 2">
+                <div class="avatar">
+                    <div class="avatar__ring">
+                        <!-- TODO(image): this is the formal photo. A casual photo, a transparent cutout or a cartoon avatar would suit the playful style better. See CONTENT-TODO.md -->
+                        <img class="avatar__img" src="images/avatar.jpg" alt="Portrait of Hermen" fetchpriority="high">
+                    </div>
+                    <div class="orbit" aria-hidden="true">
+                        <span class="orbit__item" style="--a: 0deg"><span>&lt;/&gt;</span></span>
+                        <span class="orbit__item" style="--a: 90deg"><span>{ }</span></span>
+                        <span class="orbit__item" style="--a: 180deg"><span>☕</span></span>
+                        <span class="orbit__item" style="--a: 270deg"><span>🐛</span></span>
+                    </div>
+                    <span class="sticker sticker--a" aria-hidden="true">works on my machine ✅</span>
+                    <span class="sticker sticker--b" aria-hidden="true">bug-free*<small>*terms and conditions apply</small></span>
+                </div>
+            </div>
+
+            <a class="scroll-hint" href="#about" aria-label="Scroll down to About">
+                <span class="scroll-hint__mouse" aria-hidden="true"></span>
+                <span aria-hidden="true">scroll (there's more, I promise)</span>
+            </a>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section id="about">
+            <h2 class="section-title" data-reveal><span class="section-title__num">01.</span> About me</h2>
+            <div class="about__grid">
+                <div class="about__text">
+                    <!-- TODO(content): replace these paragraphs, fun facts and stats with your own -->
+                    <p class="lead" data-reveal>Here you can tell visitors a bit more about yourself: who you are, what you build, and what gets you out of bed (besides coffee).</p>
+                    <p data-reveal style="--d: 1">Add a second paragraph about your background, what you're studying or working on, and what you want to do next. Keep it friendly. Visitors want to meet a person, not a CV.</p>
+                    <ul class="facts" data-reveal style="--d: 2">
+                        <li>🎧 Codes with lo-fi on repeat</li>
+                        <li>🐛 Professional bug collector</li>
+                        <li>🍜 Powered by good food</li>
+                        <li>🌙 Night owl (allegedly)</li>
+                    </ul>
+                    <div class="stats">
+                        <div class="card stat" data-reveal data-spotlight>
+                            <span class="stat__num"><span data-count="999">999</span>+</span>
+                            <span class="stat__label">cups of coffee ☕</span>
+                        </div>
+                        <div class="card stat" data-reveal data-spotlight style="--d: 1">
+                            <span class="stat__num"><span data-count="404">404</span></span>
+                            <span class="stat__label">bugs squashed 🐛</span>
+                        </div>
+                        <div class="card stat" data-reveal data-spotlight style="--d: 2">
+                            <span class="stat__num"><span data-count="3">3</span></span>
+                            <span class="stat__label">projects shipped 🚀</span>
+                        </div>
+                    </div>
+                </div>
+                <figure class="polaroid" data-reveal style="--d: 2">
+                    <!-- TODO(image): replace with a candid photo (hobby, desk setup, trip). 4:5 portrait, about 800x1000. See CONTENT-TODO.md -->
+                    <img src="images/placeholders/about-photo.svg" alt="Placeholder for a candid photo of Hermen" width="800" height="1000" loading="lazy">
+                    <figcaption>me, probably debugging 🐛</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section id="skills">
+            <h2 class="section-title" data-reveal><span class="section-title__num">02.</span> Skills</h2>
+            <!-- TODO(content): replace with your real skills. --level is 1 to 5 -->
+            <div class="skills__grid">
+                <article class="card skill-card" data-reveal data-spotlight>
+                    <h3 class="skill-card__title"><span aria-hidden="true">🎨</span> Frontend</h3>
+                    <ul class="skill-list">
+                        <li class="skill"><span class="skill__name">HTML &amp; CSS</span><span class="meter" style="--level: 4" role="img" aria-label="Level 4 out of 5"></span></li>
+                        <li class="skill"><span class="skill__name">JavaScript</span><span class="meter" style="--level: 3" role="img" aria-label="Level 3 out of 5"></span></li>
+                        <li class="skill"><span class="skill__name">Responsive design</span><span class="meter" style="--level: 4" role="img" aria-label="Level 4 out of 5"></span></li>
+                    </ul>
+                </article>
+                <article class="card skill-card" data-reveal data-spotlight style="--d: 1">
+                    <h3 class="skill-card__title"><span aria-hidden="true">🛠️</span> Backend &amp; data</h3>
+                    <ul class="skill-list">
+                        <li class="skill"><span class="skill__name">Python</span><span class="meter" style="--level: 3" role="img" aria-label="Level 3 out of 5"></span></li>
+                        <li class="skill"><span class="skill__name">SQL &amp; databases</span><span class="meter" style="--level: 3" role="img" aria-label="Level 3 out of 5"></span></li>
+                        <li class="skill"><span class="skill__name">REST APIs</span><span class="meter" style="--level: 2" role="img" aria-label="Level 2 out of 5"></span></li>
+                    </ul>
+                </article>
+                <article class="card skill-card" data-reveal data-spotlight style="--d: 2">
+                    <h3 class="skill-card__title"><span aria-hidden="true">🧰</span> Tools</h3>
+                    <ul class="skill-list">
+                        <li class="skill"><span class="skill__name">Git &amp; GitHub</span><span class="meter" style="--level: 4" role="img" aria-label="Level 4 out of 5"></span></li>
+                        <li class="skill"><span class="skill__name">VS Code</span><span class="meter" style="--level: 5" role="img" aria-label="Level 5 out of 5"></span></li>
+                        <li class="skill"><span class="skill__name">Figma</span><span class="meter" style="--level: 2" role="img" aria-label="Level 2 out of 5"></span></li>
+                    </ul>
+                </article>
+                <article class="card skill-card" data-reveal data-spotlight style="--d: 3">
+                    <h3 class="skill-card__title"><span aria-hidden="true">🧠</span> Soft skills (the funny ones)</h3>
+                    <ul class="chips">
+                        <li>Rubber-duck debugging</li>
+                        <li>Googling like a pro</li>
+                        <li>Turning it off and on again</li>
+                        <li>Naming things (hard)</li>
+                        <li>Coffee-driven development</li>
+                        <li>Reading the docs (eventually)</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section id="projects">
+            <h2 class="section-title" data-reveal><span class="section-title__num">03.</span> Projects</h2>
+            <div class="projects__grid">
+                <article class="card project" data-reveal data-spotlight data-tilt>
+                    <div class="project__media">
+                        <!-- TODO(image): replace with a real screenshot of this site (1280x720). See CONTENT-TODO.md -->
+                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy">
+                        <span class="project__badge">you are here 📍</span>
+                    </div>
+                    <div class="project__body">
+                        <p class="project__label">Project 01</p>
+                        <h3>This Website</h3>
+                        <p>You're looking at it! Hand-coded with HTML, CSS and vanilla JavaScript. No frameworks, just curiosity, caffeine and a rubber duck.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                        <div class="project__links">
+                            <a href="https://github.com/cwsong0117/hermen-s-website" target="_blank" rel="noopener">Source ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project" data-reveal data-spotlight data-tilt style="--d: 1">
+                    <div class="project__media">
+                        <!-- TODO(image): replace with a real screenshot (1280x720) -->
+                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy">
+                        <span class="project__badge">coming soon ⏳</span>
+                    </div>
+                    <div class="project__body">
+                        <p class="project__label">Project 02</p>
+                        <!-- TODO(content): title, description, tags and links for your project -->
+                        <h3>Your Next Big Thing</h3>
+                        <p>A short description of what it does and the problem it solves. Replace this with something you're proud of.</p>
+                        <ul class="tags"><li>Tech A</li><li>Tech B</li></ul>
+                        <div class="project__links">
+                            <a href="#">Live demo ↗</a>
+                            <a href="#">Source ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project" data-reveal data-spotlight data-tilt>
+                    <div class="project__media">
+                        <!-- TODO(image): replace with a real screenshot (1280x720) -->
+                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy">
+                        <span class="project__badge">coming soon ⏳</span>
+                    </div>
+                    <div class="project__body">
+                        <p class="project__label">Project 03</p>
+                        <!-- TODO(content): title, description, tags and links for your project -->
+                        <h3>Another Cool Thing</h3>
+                        <p>Another short description. What did you build, why, and what did you learn (or break) along the way?</p>
+                        <ul class="tags"><li>Tech A</li><li>Tech B</li></ul>
+                        <div class="project__links">
+                            <a href="#">Live demo ↗</a>
+                            <a href="#">Source ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <a class="card project project--cta" href="#contact" data-reveal data-spotlight style="--d: 1">
+                    <span class="project--cta__plus" aria-hidden="true">+</span>
+                    <h3>Your idea here?</h3>
+                    <p>Let's build it together. I promise to only break it a little.</p>
+                    <span class="project--cta__go">Get in touch →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact">
+            <h2 class="section-title" data-reveal><span class="section-title__num">04.</span> Contact</h2>
+            <div class="contact__grid">
+                <div class="card contact__card" data-reveal data-spotlight>
+                    <h3>Let's build something (or just chat)</h3>
+                    <p>Got a project, an idea, or a really good dad joke? My inbox is open. I reply faster than <code>npm install</code>. Usually.</p>
+                    <ul class="contact__list">
+                        <!-- TODO(content): replace the email and LinkedIn with your real ones -->
+                        <li>
+                            <span class="contact__key">email</span>
+                            <a href="mailto:your.email@example.com" id="email-link" data-contact="email">your.email@example.com</a>
+                            <button class="copy-btn" type="button" data-copy-from="#email-link">Copy</button>
+                        </li>
+                        <li>
+                            <span class="contact__key">linkedin</span>
+                            <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" data-contact="linkedin">linkedin.com/in/your-handle</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span class="contact__key">github</span>
+                            <a href="https://github.com/cwsong0117" target="_blank" rel="noopener" data-contact="github">github.com/cwsong0117</a>
+                            <span></span>
+                        </li>
+                    </ul>
+                    <p class="contact__hint">Prefer typing? The terminal on the right is real. Sort of. 👉</p>
+                </div>
+
+                <div class="terminal" data-reveal style="--d: 1" role="region" aria-label="Interactive terminal, just for fun">
+                    <div class="terminal__bar">
+                        <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+                        <span class="terminal__title">visitor@hermen-web: ~</span>
+                    </div>
+                    <div class="terminal__out" id="term-out" role="log" aria-live="polite"></div>
+                    <form class="terminal__form" id="term-form" autocomplete="off">
+                        <span class="terminal__prompt" aria-hidden="true">visitor@web:~$</span>
+                        <input id="term-input" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Type a terminal command">
+                    </form>
+                    <div class="terminal__chips">
+                        <button type="button" data-cmd="help">help</button>
+                        <button type="button" data-cmd="whoami">whoami</button>
+                        <button type="button" data-cmd="contact">contact</button>
+                        <button type="button" data-cmd="coffee">coffee</button>
+                        <button type="button" data-cmd="joke">joke</button>
+                        <button type="button" data-cmd="sudo hire hermen">sudo hire hermen</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer__line">Built with ☕, caffeine and far too many <code>console.log</code>s</p>
+        <p>&copy; <span id="year">2026</span> Hermen. All rights reserved.</p>
+        <p class="footer__hint"><a href="#hero">Back to top 🚀</a> · psst… try ↑ ↑ ↓ ↓ ← → ← → B A</p>
+    </footer>
+
+    <button class="duck" id="duck" type="button" aria-label="Rubber duck. Click for a debugging tip"><span aria-hidden="true">🦆</span></button>
+    <p class="duck-bubble" id="duck-bubble" role="status" aria-live="polite"></p>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

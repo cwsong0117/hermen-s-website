@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Candid photo placeholder">
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#14204a"/>
+            <stop offset="1" stop-color="#2a1a5e"/>
+        </linearGradient>
+        <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" fill="#94a3ff" fill-opacity=".18"/>
+        </pattern>
+    </defs>
+    <rect width="800" height="1000" fill="url(#bg)"/>
+    <rect width="800" height="1000" fill="url(#dots)"/>
+    <circle cx="400" cy="380" r="120" fill="#22d3ee" fill-opacity=".85"/>
+    <path d="M160 760c0-130 110-210 240-210s240 80 240 210v40H160z" fill="#a78bfa" fill-opacity=".85"/>
+    <text x="400" y="880" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="38" fill="#e6ecfa">Candid photo goes here</text>
+    <text x="400" y="930" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#8d9bbd">800 x 1000 | 4:5 portrait</text>
+</svg>
