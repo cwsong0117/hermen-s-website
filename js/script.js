@@ -516,7 +516,7 @@
         if (!out || !form || !input) return;
 
         const PROMPT = 'visitor@web:~$';
-        const SECTIONS = ['hero', 'about', 'skills', 'projects', 'contact'];
+        const SECTIONS = ['home', 'about', 'skills', 'projects', 'contact'];
         const jokes = [
             'Why do programmers prefer dark mode? Because light attracts bugs.',
             "There are 10 kinds of people: those who understand binary and those who don't.",
