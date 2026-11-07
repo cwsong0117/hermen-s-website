@@ -488,7 +488,7 @@
         const bubble = $('#duck-bubble');
         if (!duck || !bubble) return;
 
-        const tips = [
+        const tips = [ // TODO(content): optional, edit or add the rubber duck's tips
             'Explain your bug to me. I will nod wisely. Quack.',
             'Have you tried turning it off and on again?',
             'It is always the semicolon. Or the cache.',
@@ -593,7 +593,7 @@
                 print('Psst... a few commands are hidden. Try sudo.', 'dim');
             },
             whoami() {
-                print('hermen: software developer, professional bug creator, full-time coffee enthusiast.');
+                print('hermen: final-year Software Engineering student, professional bug creator, full-time coffee enthusiast.'); // TODO(content): describe yourself in one line
             },
             pwd() {
                 print('/home/visitor/hermen-portfolio');

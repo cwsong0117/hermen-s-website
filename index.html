@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hermen's personal website: a software developer who turns coffee into code. Skills, projects and how to get in touch.">
+    <meta name="description" content="Hermen's personal website: a final-year Software Engineering student who turns coffee into code. Skills, projects and how to get in touch."> <!-- TODO(content): optional, your own one-line description (shown on Google) -->
     <meta name="theme-color" content="#070b16">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hermen's Website">
-    <meta property="og:description" content="A software developer who turns coffee into code. Skills, projects and how to get in touch.">
+    <meta property="og:description" content="A final-year Software Engineering student who turns coffee into code. Skills, projects and how to get in touch."> <!-- TODO(content): optional, same description for link previews -->
     <!-- TODO(image): once the site is live, add <meta property="og:image" content="https://YOUR-DOMAIN/images/og-image.png"> (1200x630). See CONTENT-TODO.md -->
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,20 +62,17 @@
         <!-- ============ HERO ============ -->
         <section id="hero">
             <div class="hero__copy">
-                <p class="chip" data-reveal><span class="chip__dot"></span> Online · fueled by coffee ☕</p>
+                <p class="chip" data-reveal><span class="chip__dot"></span> Online · fueled by coffee ☕</p> <!-- TODO(content): optional status line, e.g. Open to internships -->
                 <h1 data-reveal style="--d: 1">Hi, I'm <span class="glitch" data-text="Hermen">Hermen</span> <span class="wave" aria-hidden="true">👋</span></h1>
-                <!-- TODO(content): edit the typed phrases (separate them with |) -->
-                <p class="hero__terminal" data-reveal style="--d: 2" aria-hidden="true"><span class="prompt">hermen@web:~$</span> <span class="typed" data-typed="I turn coffee into code ☕|I debug with a rubber duck 🦆|I google errors professionally 🔍|I ship first and polish later 🚀|I say it works on my machine 😅">I turn coffee into code ☕</span><span class="caret"></span></p>
-                <!-- TODO(content): write your own one-line intro -->
-                <p class="hero__lead" data-reveal style="--d: 3">I'm a software developer and I love to create things, mostly with code, sometimes with excuses.</p>
+                <p class="hero__terminal" data-reveal style="--d: 2" aria-hidden="true"><span class="prompt">hermen@web:~$</span> <span class="typed" data-typed="I turn coffee into code ☕|I debug with a rubber duck 🦆|I google errors professionally 🔍|I ship first and polish later 🚀|I say it works on my machine 😅">I turn coffee into code ☕</span><span class="caret"></span></p> <!-- TODO(content): your typed phrases go in data-typed (separate them with |); keep the first one inside the span too -->
+                <p class="hero__lead" data-reveal style="--d: 3">I'm a final-year Software Engineering student and I love to create things, mostly with code, sometimes with excuses.</p> <!-- TODO(content): your own one-line intro -->
                 <div class="hero__cta" data-reveal style="--d: 4">
                     <a class="btn btn--primary" href="#projects">See my projects <span aria-hidden="true">→</span></a>
                     <a class="btn btn--ghost" href="#contact">Say hello</a>
                 </div>
                 <ul class="socials" data-reveal style="--d: 5">
                     <li><a href="https://github.com/cwsong0117" target="_blank" rel="noopener">./github</a></li>
-                    <!-- TODO(content): replace with your real LinkedIn profile URL -->
-                    <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">./linkedin</a></li>
+                    <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">./linkedin</a></li> <!-- TODO(content): your real LinkedIn profile URL -->
                     <li><a href="#contact">./email</a></li>
                 </ul>
             </div>
@@ -83,8 +80,7 @@
             <div class="hero__visual" data-reveal style="--d: 2">
                 <div class="avatar">
                     <div class="avatar__ring">
-                        <!-- TODO(image): this is the formal photo. A casual photo, a transparent cutout or a cartoon avatar would suit the playful style better. See CONTENT-TODO.md -->
-                        <img class="avatar__img" src="images/avatar.jpg" alt="Portrait of Hermen" fetchpriority="high">
+                        <img class="avatar__img" src="images/avatar.jpg" alt="Portrait of Hermen" fetchpriority="high"> <!-- TODO(image): this is the formal photo; a casual photo, transparent cutout or cartoon avatar would suit the style better (see CONTENT-TODO.md) -->
                     </div>
                     <div class="orbit" aria-hidden="true">
                         <span class="orbit__item" style="--a: 0deg"><span>&lt;/&gt;</span></span>
@@ -108,34 +104,32 @@
             <h2 class="section-title" data-reveal><span class="section-title__num">01.</span> About me</h2>
             <div class="about__grid">
                 <div class="about__text">
-                    <!-- TODO(content): replace these paragraphs, fun facts and stats with your own -->
-                    <p class="lead" data-reveal>Here you can tell visitors a bit more about yourself: who you are, what you build, and what gets you out of bed (besides coffee).</p>
-                    <p data-reveal style="--d: 1">Add a second paragraph about your background, what you're studying or working on, and what you want to do next. Keep it friendly. Visitors want to meet a person, not a CV.</p>
+                    <p class="lead" data-reveal>Here you can tell visitors a bit more about yourself: who you are, what you build, and what gets you out of bed (besides coffee).</p> <!-- TODO(content): who you are and what you build -->
+                    <p data-reveal style="--d: 1">Add a second paragraph about your background, what you're studying or working on, and what you want to do next. Keep it friendly. Visitors want to meet a person, not a CV.</p> <!-- TODO(content): your background and what is next -->
                     <ul class="facts" data-reveal style="--d: 2">
-                        <li>🎧 Codes with lo-fi on repeat</li>
+                        <li>🎧 Codes with lo-fi on repeat</li> <!-- TODO(content): fun facts about you (edit all 4 lines) -->
                         <li>🐛 Professional bug collector</li>
                         <li>🍜 Powered by good food</li>
                         <li>🌙 Night owl (allegedly)</li>
                     </ul>
                     <div class="stats">
                         <div class="card stat" data-reveal data-spotlight>
-                            <span class="stat__num"><span data-count="999">999</span>+</span>
-                            <span class="stat__label">cups of coffee ☕</span>
+                            <span class="stat__num"><span data-count="999">999</span>+</span> <!-- TODO(content): your number (change data-count AND the text inside) -->
+                            <span class="stat__label">cups of coffee ☕</span> <!-- TODO(content): label for this number -->
                         </div>
                         <div class="card stat" data-reveal data-spotlight style="--d: 1">
-                            <span class="stat__num"><span data-count="404">404</span></span>
-                            <span class="stat__label">bugs squashed 🐛</span>
+                            <span class="stat__num"><span data-count="404">404</span></span> <!-- TODO(content): your number (data-count + text) -->
+                            <span class="stat__label">bugs squashed 🐛</span> <!-- TODO(content): label -->
                         </div>
                         <div class="card stat" data-reveal data-spotlight style="--d: 2">
-                            <span class="stat__num"><span data-count="3">3</span></span>
-                            <span class="stat__label">projects shipped 🚀</span>
+                            <span class="stat__num"><span data-count="3">3</span></span> <!-- TODO(content): your number (data-count + text) -->
+                            <span class="stat__label">projects shipped 🚀</span> <!-- TODO(content): label -->
                         </div>
                     </div>
                 </div>
                 <figure class="polaroid" data-reveal style="--d: 2">
-                    <!-- TODO(image): replace with a candid photo (hobby, desk setup, trip). 4:5 portrait, about 800x1000. See CONTENT-TODO.md -->
-                    <img src="images/placeholders/about-photo.svg" alt="Placeholder for a candid photo of Hermen" width="800" height="1000" loading="lazy">
-                    <figcaption>me, probably debugging 🐛</figcaption>
+                    <img src="images/placeholders/about-photo.svg" alt="Placeholder for a candid photo of Hermen" width="800" height="1000" loading="lazy"> <!-- TODO(image): replace src with a candid photo (hobby, desk setup, trip), 4:5 portrait about 800x1000, and update the alt text -->
+                    <figcaption>me, probably debugging 🐛</figcaption> <!-- TODO(content): a short funny caption -->
                 </figure>
             </div>
         </section>
@@ -143,10 +137,9 @@
         <!-- ============ SKILLS ============ -->
         <section id="skills">
             <h2 class="section-title" data-reveal><span class="section-title__num">02.</span> Skills</h2>
-            <!-- TODO(content): replace with your real skills. --level is 1 to 5 -->
             <div class="skills__grid">
                 <article class="card skill-card" data-reveal data-spotlight>
-                    <h3 class="skill-card__title"><span aria-hidden="true">🎨</span> Frontend</h3>
+                    <h3 class="skill-card__title"><span aria-hidden="true">🎨</span> Frontend</h3> <!-- TODO(content): group title, and your real skills below (--level 1 to 5; also update the aria-label) -->
                     <ul class="skill-list">
                         <li class="skill"><span class="skill__name">HTML &amp; CSS</span><span class="meter" style="--level: 4" role="img" aria-label="Level 4 out of 5"></span></li>
                         <li class="skill"><span class="skill__name">JavaScript</span><span class="meter" style="--level: 3" role="img" aria-label="Level 3 out of 5"></span></li>
@@ -154,7 +147,7 @@
                     </ul>
                 </article>
                 <article class="card skill-card" data-reveal data-spotlight style="--d: 1">
-                    <h3 class="skill-card__title"><span aria-hidden="true">🛠️</span> Backend &amp; data</h3>
+                    <h3 class="skill-card__title"><span aria-hidden="true">🛠️</span> Backend &amp; data</h3> <!-- TODO(content): group title and your real skills below (--level 1 to 5) -->
                     <ul class="skill-list">
                         <li class="skill"><span class="skill__name">Python</span><span class="meter" style="--level: 3" role="img" aria-label="Level 3 out of 5"></span></li>
                         <li class="skill"><span class="skill__name">SQL &amp; databases</span><span class="meter" style="--level: 3" role="img" aria-label="Level 3 out of 5"></span></li>
@@ -162,7 +155,7 @@
                     </ul>
                 </article>
                 <article class="card skill-card" data-reveal data-spotlight style="--d: 2">
-                    <h3 class="skill-card__title"><span aria-hidden="true">🧰</span> Tools</h3>
+                    <h3 class="skill-card__title"><span aria-hidden="true">🧰</span> Tools</h3> <!-- TODO(content): group title and your real tools below (--level 1 to 5) -->
                     <ul class="skill-list">
                         <li class="skill"><span class="skill__name">Git &amp; GitHub</span><span class="meter" style="--level: 4" role="img" aria-label="Level 4 out of 5"></span></li>
                         <li class="skill"><span class="skill__name">VS Code</span><span class="meter" style="--level: 5" role="img" aria-label="Level 5 out of 5"></span></li>
@@ -170,7 +163,7 @@
                     </ul>
                 </article>
                 <article class="card skill-card" data-reveal data-spotlight style="--d: 3">
-                    <h3 class="skill-card__title"><span aria-hidden="true">🧠</span> Soft skills (the funny ones)</h3>
+                    <h3 class="skill-card__title"><span aria-hidden="true">🧠</span> Soft skills (the funny ones)</h3> <!-- TODO(content): optional, keep the jokes or write your own chips below -->
                     <ul class="chips">
                         <li>Rubber-duck debugging</li>
                         <li>Googling like a pro</li>
@@ -189,8 +182,7 @@
             <div class="projects__grid">
                 <article class="card project" data-reveal data-spotlight data-tilt>
                     <div class="project__media">
-                        <!-- TODO(image): replace with a real screenshot of this site (1280x720). See CONTENT-TODO.md -->
-                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy">
+                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy"> <!-- TODO(image): screenshot of this website, 1280x720 (replace src and alt) -->
                         <span class="project__badge">you are here 📍</span>
                     </div>
                     <div class="project__body">
@@ -199,45 +191,41 @@
                         <p>You're looking at it! Hand-coded with HTML, CSS and vanilla JavaScript. No frameworks, just curiosity, caffeine and a rubber duck.</p>
                         <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                         <div class="project__links">
-                            <a href="https://github.com/cwsong0117/hermen-s-website" target="_blank" rel="noopener">Source ↗</a>
+                            <a href="https://github.com/cwsong0117/hermen-s-website" target="_blank" rel="noopener">Source ↗</a> <!-- TODO(content): after you deploy, add a "Live demo" link next to this one -->
                         </div>
                     </div>
                 </article>
 
                 <article class="card project" data-reveal data-spotlight data-tilt style="--d: 1">
                     <div class="project__media">
-                        <!-- TODO(image): replace with a real screenshot (1280x720) -->
-                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy">
-                        <span class="project__badge">coming soon ⏳</span>
+                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy"> <!-- TODO(image): screenshot of project 02, 1280x720 (replace src and alt) -->
+                        <span class="project__badge">coming soon ⏳</span> <!-- TODO(content): change this badge or delete the line -->
                     </div>
                     <div class="project__body">
                         <p class="project__label">Project 02</p>
-                        <!-- TODO(content): title, description, tags and links for your project -->
-                        <h3>Your Next Big Thing</h3>
-                        <p>A short description of what it does and the problem it solves. Replace this with something you're proud of.</p>
-                        <ul class="tags"><li>Tech A</li><li>Tech B</li></ul>
+                        <h3>Your Next Big Thing</h3> <!-- TODO(content): project title -->
+                        <p>A short description of what it does and the problem it solves. Replace this with something you're proud of.</p> <!-- TODO(content): what it does and what you learned -->
+                        <ul class="tags"><li>Tech A</li><li>Tech B</li></ul> <!-- TODO(content): technologies you used -->
                         <div class="project__links">
-                            <a href="#">Live demo ↗</a>
-                            <a href="#">Source ↗</a>
+                            <a href="#">Live demo ↗</a> <!-- TODO(content): live demo URL (or delete this line) -->
+                            <a href="#">Source ↗</a> <!-- TODO(content): GitHub URL (or delete this line) -->
                         </div>
                     </div>
                 </article>
 
                 <article class="card project" data-reveal data-spotlight data-tilt>
                     <div class="project__media">
-                        <!-- TODO(image): replace with a real screenshot (1280x720) -->
-                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy">
-                        <span class="project__badge">coming soon ⏳</span>
+                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy"> <!-- TODO(image): screenshot of project 03, 1280x720 (replace src and alt) -->
+                        <span class="project__badge">coming soon ⏳</span> <!-- TODO(content): change this badge or delete the line -->
                     </div>
                     <div class="project__body">
                         <p class="project__label">Project 03</p>
-                        <!-- TODO(content): title, description, tags and links for your project -->
-                        <h3>Another Cool Thing</h3>
-                        <p>Another short description. What did you build, why, and what did you learn (or break) along the way?</p>
-                        <ul class="tags"><li>Tech A</li><li>Tech B</li></ul>
+                        <h3>Another Cool Thing</h3> <!-- TODO(content): project title -->
+                        <p>Another short description. What did you build, why, and what did you learn (or break) along the way?</p> <!-- TODO(content): what it does and what you learned -->
+                        <ul class="tags"><li>Tech A</li><li>Tech B</li></ul> <!-- TODO(content): technologies you used -->
                         <div class="project__links">
-                            <a href="#">Live demo ↗</a>
-                            <a href="#">Source ↗</a>
+                            <a href="#">Live demo ↗</a> <!-- TODO(content): live demo URL (or delete this line) -->
+                            <a href="#">Source ↗</a> <!-- TODO(content): GitHub URL (or delete this line) -->
                         </div>
                     </div>
                 </article>
@@ -259,15 +247,14 @@
                     <h3>Let's build something (or just chat)</h3>
                     <p>Got a project, an idea, or a really good dad joke? My inbox is open. I reply faster than <code>npm install</code>. Usually.</p>
                     <ul class="contact__list">
-                        <!-- TODO(content): replace the email and LinkedIn with your real ones -->
                         <li>
                             <span class="contact__key">email</span>
-                            <a href="mailto:your.email@example.com" id="email-link" data-contact="email">your.email@example.com</a>
+                            <a href="mailto:your.email@example.com" id="email-link" data-contact="email">your.email@example.com</a> <!-- TODO(content): your real email (change BOTH the mailto: href and the visible text) -->
                             <button class="copy-btn" type="button" data-copy-from="#email-link">Copy</button>
                         </li>
                         <li>
                             <span class="contact__key">linkedin</span>
-                            <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" data-contact="linkedin">linkedin.com/in/your-handle</a>
+                            <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" data-contact="linkedin">linkedin.com/in/your-handle</a> <!-- TODO(content): your real LinkedIn (change BOTH the href and the visible text) -->
                             <span></span>
                         </li>
                         <li>
