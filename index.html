@@ -72,7 +72,7 @@
                 </div>
                 <ul class="socials" data-reveal style="--d: 5">
                     <li><a href="https://github.com/cwsong0117" target="_blank" rel="noopener">./github</a></li>
-                    <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">./linkedin</a></li> <!-- TODO(content): your real LinkedIn profile URL -->
+                    <li><a href="https://www.linkedin.com/in/wei-song-chan-b89b83317" target="_blank" rel="noopener">./linkedin</a></li>
                     <li><a href="#contact">./email</a></li>
                 </ul>
             </div>
@@ -182,50 +182,81 @@
             <div class="projects__grid">
                 <article class="card project" data-reveal data-spotlight data-tilt>
                     <div class="project__media">
-                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy"> <!-- TODO(image): screenshot of this website, 1280x720 (replace src and alt) -->
-                        <span class="project__badge">you are here 📍</span>
+                        <img src="images/project-apple-ripeness.webp" alt="Screenshot of the Apple Ripeness web app: an uploaded apple photo on the left and the detection result with a green outline on the right" width="2000" height="1168" loading="lazy">
+                        <span class="project__badge">team project 👥</span> <!-- TODO(content): optional, change or delete this badge -->
                     </div>
                     <div class="project__body">
                         <p class="project__label">Project 01</p>
-                        <h3>This Website</h3>
-                        <p>You're looking at it! Hand-coded with HTML, CSS and vanilla JavaScript. No frameworks, just curiosity, caffeine and a rubber duck.</p>
-                        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                        <h3>Apple Ripeness</h3>
+                        <p>A computer vision web app built with my teammates to help farmers check how ripe their apples are. Take a photo with a phone camera, upload images or use the live camera, and the system finds each apple and tells you whether it is ripe, unripe or overripe.</p> <!-- TODO(content): add your own role in the team and what you learned -->
+                        <ul class="tags"><li>Python</li><li>OpenCV</li><li>Computer Vision</li><li>Image Processing</li></ul> <!-- TODO(content): add any other libraries or the web framework you used -->
                         <div class="project__links">
-                            <a href="https://github.com/cwsong0117/hermen-s-website" target="_blank" rel="noopener">Source ↗</a> <!-- TODO(content): after you deploy, add a "Live demo" link next to this one -->
+                            <a href="#">Live demo ↗</a> <!-- TODO(content): live demo URL (or delete this line) -->
+                            <a href="#">Source ↗</a> <!-- TODO(content): GitHub URL (or delete this line) -->
                         </div>
                     </div>
                 </article>
 
                 <article class="card project" data-reveal data-spotlight data-tilt style="--d: 1">
-                    <div class="project__media">
-                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy"> <!-- TODO(image): screenshot of project 02, 1280x720 (replace src and alt) -->
-                        <span class="project__badge">coming soon ⏳</span> <!-- TODO(content): change this badge or delete the line -->
+                    <div class="project__media project__media--top">
+                        <img src="images/project-gamfui.png" alt="Screenshot of the GamFui fitness app home screen showing today's activity, a BMI indicator and a weight trend" width="624" height="785" loading="lazy">
+                        <span class="project__badge">mobile app 📱</span> <!-- TODO(content): optional, change or delete this badge -->
                     </div>
                     <div class="project__body">
                         <p class="project__label">Project 02</p>
-                        <h3>Your Next Big Thing</h3> <!-- TODO(content): project title -->
-                        <p>A short description of what it does and the problem it solves. Replace this with something you're proud of.</p> <!-- TODO(content): what it does and what you learned -->
-                        <ul class="tags"><li>Tech A</li><li>Tech B</li></ul> <!-- TODO(content): technologies you used -->
+                        <h3>GamFui</h3>
+                        <p>A Flutter fitness app built with my teammates. Log your workouts (running, swimming, walking, riding and more), keep an eye on your BMI and weight trend, note down your diet every day, and snap a photo of your meal to estimate its calories and see whether it helps you reach your target weight.</p> <!-- TODO(content): add your own role in the team and what you learned -->
+                        <ul class="tags"><li>Flutter</li><li>Dart</li><li>Mobile App</li></ul> <!-- TODO(content): add the other tech you used (database, how the calories are calculated, etc.) -->
                         <div class="project__links">
-                            <a href="#">Live demo ↗</a> <!-- TODO(content): live demo URL (or delete this line) -->
-                            <a href="#">Source ↗</a> <!-- TODO(content): GitHub URL (or delete this line) -->
+                            <a href="#">Source ↗</a> <!-- TODO(content): GitHub URL, or a demo video / APK link (or delete this line) -->
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project" data-reveal data-spotlight data-tilt>
+                    <div class="project__media project__media--top">
+                        <img src="images/project-ngear.webp" alt="Screenshot of the NGEAR sports gear store: the About page with the hero banner and the mission and vision cards" width="1869" height="1227" loading="lazy">
+                        <span class="project__badge">school project 🎓</span> <!-- TODO(content): optional, change or delete this badge -->
+                    </div>
+                    <div class="project__body">
+                        <p class="project__label">Project 03</p>
+                        <h3>NGEAR</h3>
+                        <p>A sports gear e-commerce site built with plain layered PHP and MySQL, running locally on XAMPP. Members can shop, check out with Stripe (test mode), use vouchers and QR codes, keep a wishlist, leave reviews and chat live with admins. Admins get a separate back-office with two-factor login for products, stock, orders, refunds and analytics, and the code was recently hardened with security fixes.</p> <!-- TODO(content): add your own role in the team and what you learned -->
+                        <ul class="tags"><li>PHP</li><li>MySQL</li><li>Stripe</li><li>XAMPP</li><li>2FA</li></ul> <!-- TODO(content): add or remove tags to match what you used -->
+                        <div class="project__links">
+                            <a href="#">Source ↗</a> <!-- TODO(content): GitHub URL (it runs locally on XAMPP, so there is no live demo; delete this line if the code is private) -->
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project" data-reveal data-spotlight data-tilt style="--d: 1">
+                    <div class="project__media project__media--app">
+                        <img src="images/project-trek.jpg" alt="Screenshot of the TREK trip planner showing a day's schedule in Kuala Lumpur with a total budget card, a usage bar and overspending warning" width="576" height="1280" loading="lazy">
+                        <span class="project__badge">AI travel app ✨</span> <!-- TODO(content): optional, change or delete this badge -->
+                    </div>
+                    <div class="project__body">
+                        <p class="project__label">Project 04</p>
+                        <h3>TREK</h3>
+                        <p>A Flutter app for planning and managing trips in Malaysia. Enter a destination, dates, budget and preferences and Google Gemini builds a day-by-day itinerary, with photos from Wikipedia and Wikimedia and help finding flights, trains and buses between places. During the trip it tracks your spending: receipts are read with OCR, overspending is detected and the budget is reallocated across the remaining activities. Gemini is called through a Supabase Edge Function, so no API key ships in the app.</p> <!-- TODO(content): add your own role in the team and what you learned -->
+                        <ul class="tags"><li>Flutter</li><li>Dart</li><li>Supabase</li><li>Gemini</li><li>OCR</li></ul> <!-- TODO(content): add or remove tags to match what you used -->
+                        <div class="project__links">
+                            <a href="#">Source ↗</a> <!-- TODO(content): GitHub URL, or a demo video / APK link (or delete this line) -->
                         </div>
                     </div>
                 </article>
 
                 <article class="card project" data-reveal data-spotlight data-tilt>
                     <div class="project__media">
-                        <img src="images/placeholders/project.svg" alt="Placeholder for a project screenshot" width="1280" height="720" loading="lazy"> <!-- TODO(image): screenshot of project 03, 1280x720 (replace src and alt) -->
-                        <span class="project__badge">coming soon ⏳</span> <!-- TODO(content): change this badge or delete the line -->
+                        <img src="images/project-website.jpg" alt="Screenshot of this website's home section: a greeting, a typing terminal line, and a round portrait with orbiting icons" width="926" height="450" loading="lazy">
+                        <span class="project__badge">you are here 📍</span>
                     </div>
                     <div class="project__body">
-                        <p class="project__label">Project 03</p>
-                        <h3>Another Cool Thing</h3> <!-- TODO(content): project title -->
-                        <p>Another short description. What did you build, why, and what did you learn (or break) along the way?</p> <!-- TODO(content): what it does and what you learned -->
-                        <ul class="tags"><li>Tech A</li><li>Tech B</li></ul> <!-- TODO(content): technologies you used -->
+                        <p class="project__label">Project 05</p>
+                        <h3>This Website</h3>
+                        <p>You're looking at it! My personal website, hand-coded with HTML, CSS and vanilla JavaScript. No frameworks, just curiosity, caffeine and a rubber duck. It has a dark and light theme, an animated network background, a typing intro, scroll animations, and an interactive terminal with hidden commands and easter eggs. It is responsive down to phone width and respects reduced-motion settings.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive</li></ul>
                         <div class="project__links">
-                            <a href="#">Live demo ↗</a> <!-- TODO(content): live demo URL (or delete this line) -->
-                            <a href="#">Source ↗</a> <!-- TODO(content): GitHub URL (or delete this line) -->
+                            <a href="https://github.com/cwsong0117/hermen-s-website" target="_blank" rel="noopener">Source ↗</a> <!-- TODO(content): after you deploy, add a "Live demo" link next to this one -->
                         </div>
                     </div>
                 </article>
@@ -249,12 +280,12 @@
                     <ul class="contact__list">
                         <li>
                             <span class="contact__key">email</span>
-                            <a href="mailto:your.email@example.com" id="email-link" data-contact="email">your.email@example.com</a> <!-- TODO(content): your real email (change BOTH the mailto: href and the visible text) -->
+                            <a href="mailto:cwsong0833@gmail.com" id="email-link" data-contact="email">cwsong0833@gmail.com</a>
                             <button class="copy-btn" type="button" data-copy-from="#email-link">Copy</button>
                         </li>
                         <li>
                             <span class="contact__key">linkedin</span>
-                            <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" data-contact="linkedin">linkedin.com/in/your-handle</a> <!-- TODO(content): your real LinkedIn (change BOTH the href and the visible text) -->
+                            <a href="https://www.linkedin.com/in/wei-song-chan-b89b83317" target="_blank" rel="noopener" data-contact="linkedin">linkedin.com/in/wei-song-chan-b89b83317</a>
                             <span></span>
                         </li>
                         <li>
@@ -290,6 +321,15 @@
     </main>
 
     <footer>
+        <p class="footer__label" data-reveal>ls ./socials</p>
+        <ul class="footer__social" aria-label="Social links" data-reveal style="--d: 1">
+            <li><a href="https://github.com/cwsong0117" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><img src="images/social/github.png" alt="" width="26" height="26"></a></li>
+            <li><a href="https://www.linkedin.com/in/wei-song-chan-b89b83317" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><img src="images/social/linkedin.png" alt="" width="26" height="26"></a></li>
+            <li><a href="#" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><img src="images/social/instagram.png" alt="" width="26" height="26"></a></li> <!-- TODO(content): replace # with your Instagram profile URL, e.g. https://www.instagram.com/yourname -->
+            <li><a href="#" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><img src="images/social/telegram.png" alt="" width="26" height="26"></a></li> <!-- TODO(content): replace # with your Telegram link, e.g. https://t.me/yourusername -->
+            <li><a href="#" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><img src="images/social/whatsapp.png" alt="" width="26" height="26"></a></li> <!-- TODO(content): replace # with https://wa.me/ plus your number with country code, digits only (e.g. https://wa.me/60123456789) -->
+            <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><img src="images/social/facebook.png" alt="" width="26" height="26"></a></li> <!-- TODO(content): replace # with your Facebook profile URL -->
+        </ul>
         <p class="footer__line">Built with ☕, caffeine and far too many <code>console.log</code>s</p>
         <p>&copy; <span id="year">2026</span> Hermen. All rights reserved.</p>
         <p class="footer__hint"><a href="#home">Back to top 🚀</a> · psst… try ↑ ↑ ↓ ↓ ← → ← → B A</p>

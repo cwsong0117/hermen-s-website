@@ -1021,6 +1021,16 @@ section {
     transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+/* tall phone screenshots: show the top of the screen instead of the middle */
+.project__media--top img {
+    object-position: top;
+}
+
+/* TREK: skip the phone status bar and show the budget card */
+.project__media--app img {
+    object-position: 50% 19%;
+}
+
 .project:hover .project__media img {
     transform: scale(1.06);
 }
@@ -1099,12 +1109,17 @@ section {
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    min-height: 280px;
+    min-height: 220px;
     padding: 2.5rem 1.5rem;
     text-align: center;
     color: var(--text);
     border-style: dashed;
     border-color: var(--border-strong);
+}
+
+/* with an odd number of cards, the last one spans the full width instead of leaving a gap */
+.project--cta:nth-child(odd) {
+    grid-column: 1 / -1;
 }
 
 .project--cta p {
@@ -1339,6 +1354,49 @@ footer {
 
 footer p + p {
     margin-top: 0.35rem;
+}
+
+.footer__label {
+    margin-bottom: 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+/* white chips so the dark logos (GitHub, LinkedIn, Facebook) stay visible on the dark theme */
+.footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1.75rem;
+}
+
+.footer__social a {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    background: #f4f7ff;
+    border: 1px solid var(--border-strong);
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.footer__social a:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 10px 26px var(--glow);
+}
+
+.footer__social img {
+    width: 26px;
+    height: 26px;
+    transition: transform 0.25s;
+}
+
+.footer__social a:hover img {
+    transform: rotate(-8deg) scale(1.1);
 }
 
 .footer__hint {

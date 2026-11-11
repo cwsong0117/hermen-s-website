@@ -9,7 +9,7 @@ In VS Code, press `Ctrl+Shift+F` and search for `TODO(` to jump through all of t
 |---|---|---|---|
 | Hero avatar | `images/avatar.jpg` (your formal photo on a blue background) | A casual photo, a **transparent-background cutout** (PNG/WebP), or a **cartoon/pixel-art avatar** | Square-ish crop around the face, about 600x600 or bigger, under 200 KB. The playful theme suits something less formal than an ID photo. |
 | About section (polaroid) | `images/placeholders/about-photo.svg` | A **candid photo**: hobby, desk setup, a trip, you laughing | 4:5 portrait, about 800x1000, `.jpg` or `.webp`. Change the `src` in `index.html`. |
-| Project 01 / 02 / 03 cards | `images/placeholders/project.svg` | A **real screenshot** of each project | 16:9, 1280x720, `.webp` or `.png`. Save as `images/project-1.webp` etc. and change each `src`. |
+| Project cards | All five now use real screenshots: `images/project-apple-ripeness.webp`, `images/project-gamfui.png`, `images/project-ngear.webp`, `images/project-trek.jpg` and `images/project-website.jpg`. More GamFui screens (exercise, diet, meal photo) would show the app off better; the card shows the top of the one screenshot. |
 | Link preview (WhatsApp, LinkedIn, Discord) | Not set | A **1200x630** banner with your name and tagline | Save as `images/og-image.png`, then uncomment/add the `og:image` meta tag in `<head>` using your final site URL. |
 | Browser tab icon | `images/favicon.svg` (an "H" in a neon frame) | Your own logo or initials if you want | Keep it simple, it is shown at 16x16. |
 
@@ -23,8 +23,11 @@ In VS Code, press `Ctrl+Shift+F` and search for `TODO(` to jump through all of t
 | Contact email | Replace `your.email@example.com` (in the `href` **and** the visible text). The Copy button and terminal pick it up automatically. |
 | About | Two paragraphs, four "fun facts", three stats (`data-count` is the number that counts up). |
 | Skills | Names and levels (`--level: 1` to `5`). The "soft skills" card is the funny one, keep or change it. |
-| Project 01 | Already points to this repo. Add a live link once the site is published. |
-| Project 02 / 03 | Title, description, tags, and the two links (both are `#` right now, so they jump to the top). |
+| Project 01 (Apple Ripeness) | The tags are Python, OpenCV, Computer Vision and Image Processing; add any other libraries or the web framework, your own role in the team, and the live demo and source links (both are `#` right now). |
+| Project 02 (GamFui) | The tags are Flutter, Dart and Mobile App; add the other tech you used (database, how the calories are calculated), your own role in the team, and the source link (`#` right now). |
+| Project 03 (NGEAR) | The tags are PHP, MySQL, Stripe, XAMPP and 2FA; add your own role in the team and the source link (`#` right now). It runs locally on XAMPP, so there is no live demo. |
+| Project 04 (TREK) | The tags are Flutter, Dart, Supabase, Gemini and OCR; add your own role in the team and the source link (`#` right now). |
+| Project 05 (This Website) | Already points to this repo. Add a live link once the site is published. |
 | Footer | The year updates itself. |
 
 ## 3. Fun features (so you know they exist)
