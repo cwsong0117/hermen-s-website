@@ -8,7 +8,7 @@ In VS Code, press `Ctrl+Shift+F` and search for `TODO(` to jump through all of t
 | Where | Currently | Recommended replacement | Notes |
 |---|---|---|---|
 | Hero avatar | `images/avatar.jpg` (your formal photo on a blue background) | A casual photo, a **transparent-background cutout** (PNG/WebP), or a **cartoon/pixel-art avatar** | Square-ish crop around the face, about 600x600 or bigger, under 200 KB. The playful theme suits something less formal than an ID photo. |
-| About section (polaroid) | `images/placeholders/about-photo.svg` | A **candid photo**: hobby, desk setup, a trip, you laughing | 4:5 portrait, about 800x1000, `.jpg` or `.webp`. Change the `src` in `index.html`. |
+| About section (polaroid) | `images/about-photo.webp` (done, your trip photo) | Optional: swap for another candid photo | 4:5 portrait works best; the polaroid crops it to that shape. |
 | Project cards | All five now use real screenshots: `images/project-apple-ripeness.webp`, `images/project-gamfui.png`, `images/project-ngear.webp`, `images/project-trek.jpg` and `images/project-website.jpg`. More GamFui screens (exercise, diet, meal photo) would show the app off better; the card shows the top of the one screenshot. |
 | Link preview (WhatsApp, LinkedIn, Discord) | Not set | A **1200x630** banner with your name and tagline | Save as `images/og-image.png`, then uncomment/add the `og:image` meta tag in `<head>` using your final site URL. |
 | Browser tab icon | `images/favicon.svg` (an "H" in a neon frame) | Your own logo or initials if you want | Keep it simple, it is shown at 16x16. |
@@ -21,7 +21,7 @@ In VS Code, press `Ctrl+Shift+F` and search for `TODO(` to jump through all of t
 | Hero intro line | Write your own one-liner. |
 | `./linkedin` and the Contact section | Replace `https://www.linkedin.com/in/your-handle` with your real profile. |
 | Contact email | Replace `your.email@example.com` (in the `href` **and** the visible text). The Copy button and terminal pick it up automatically. |
-| About | Two paragraphs, four "fun facts", three stats (`data-count` is the number that counts up). |
+| About | Paragraphs and fun facts are done. The three stats (999 coffees, 404 bugs, 3 projects) are still jokes: change them or keep them (`data-count` is the number that counts up). |
 | Skills | Names and levels (`--level: 1` to `5`). The "soft skills" card is the funny one, keep or change it. |
 | Project 01 (Apple Ripeness) | The tags are Python, OpenCV, Computer Vision and Image Processing; add any other libraries or the web framework, your own role in the team, and the live demo and source links (both are `#` right now). |
 | Project 02 (GamFui) | The tags are Flutter, Dart and Mobile App; add the other tech you used (database, how the calories are calculated), your own role in the team, and the source link (`#` right now). |
